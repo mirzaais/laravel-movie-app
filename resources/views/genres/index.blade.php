@@ -6,7 +6,7 @@
         <!-- Breadcrumb Start -->
         <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <h2 class="text-title-md2 font-bold text-black dark:text-white">
-                Tables
+                genrrr
             </h2>
 
             <nav>
@@ -26,41 +26,37 @@
             <div class="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
                 <div class="grid grid-cols-6 border-t border-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
                     <div class="col-span-3 flex items-center">
-                        <p class="font-medium">Anime Name</p>
+                        <p class="font-medium">ID</p>
                     </div>
                     <div class="col-span-1 items-center sm:flex">
-                        <p class="font-medium">Genre</p>
+                        <p class="font-medium">Name</p>
                     </div>
                     <div class="col-span-3 flex items-center">
-                        <p class="font-medium">Synopsis</p>
+                        <p class="font-medium">Description</p>
                     </div>
                     <div class="col-span-1 flex items-center">
                         <p class="font-medium">Actions</p>
                     </div>
                 </div>
 
-                @foreach ($movies as $movie)
+                @foreach ($genres as $genre)
 
-                
                 <div class="grid grid-cols-6 border-t border-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
                     <div class="col-span-3 flex items-center">
                         <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
-                            <div class="w-12 rounded-md">
-                                <img src="src/images/movie/{{$movie['poster']}}" />
-                            </div>
                             <p class="text-sm font-medium text-black dark:text-white">
-                                {{$movie['title']}}
+                            {{$genre['idem']}}
                             </p>
                         </div>
                     </div>
                     <div class="col-span-1 items-center sm:flex">
                         <p class="text-sm font-medium text-black dark:text-white">
-                        {{$movie['genre']}}  
+                        {{$genre['name']}}
                         </p>
                     </div>
                     <div class="col-span-3 flex items-center">
                         <p class="text-sm font-medium text-black dark:text-white">
-                        {{$movie['synopsis']}}
+                        {{$genre['description']}}
                         </p>
                     </div>
                     <div class="col-span-1 flex items-center">
@@ -71,6 +67,7 @@
                     </div>
                 </div>
                 @endforeach
+
             </div>
 
             <!-- ====== Table Two End -->
