@@ -48,34 +48,30 @@
                 @foreach ($reviews as $review)
                 <div class="grid grid-cols-8 border-t border-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-6 md:px-6 2xl:px-7.5">
                     <div class="col-span-1 flex items-center">
-                        <div class="flex flex-col gap-2 sm:flex-row sm:items-center">
+                        <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
                             <p class="text-sm font-medium text-black dark:text-white">
-                            {{$review['idem']}}
+                                {{$review->id }}
                             </p>
                         </div>
                     </div>
                     <div class="col-span-1 items-center sm:flex">
-                    <div class="w-12 rounded-md">
-                                <img src="src/images/movie/{{$review['poster']}}" alt="Product" />
-                            </div>
                         <p class="text-sm font-medium text-black dark:text-white">
-                        {{$review['title']}}
-                        </p>
-                    </div>
-                    <div class="col-span-1 items-center sm:flex">
-                        <p class="text-sm font-medium text-black dark:text-white">
-                        {{$review['user']}}
-                        </p>
-                    </div>
-                   
-                    <div class="col-span-1 items-center sm:flex">
-                        <p class="text-sm font-medium text-black dark:text-white">
-                        {{$review['rating']}}
+                        {{$review->movie->title }}  
                         </p>
                     </div>
                     <div class="col-span-1 flex items-center">
                         <p class="text-sm font-medium text-black dark:text-white">
-                        {{$review['date']}}
+                        {{$review->user}}
+                        </p>
+                    </div>
+                    <div class="col-span-1 flex items-center">
+                        <p class="text-sm font-medium text-black dark:text-white">
+                        {{$review->rating}}
+                        </p>
+                    </div>
+                    <div class="col-span-1 flex items-center">
+                        <p class="text-sm font-medium text-black dark:text-white">
+                        {{$review->date}}
                         </p>
                     </div>
                     <div class="col-span-1 flex items-center">

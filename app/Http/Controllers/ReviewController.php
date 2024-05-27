@@ -9,9 +9,9 @@ class ReviewController extends Controller
 {
     public function index()
     {
-        $review = new Review();
-        $reviews = $review->getAllMovies();
+        $reviews = Review::all();
+        
 
-        return view('reviews.index', ['reviews'=> $reviews]);
+        return view('reviews.index', compact ('reviews'));
     }
 }

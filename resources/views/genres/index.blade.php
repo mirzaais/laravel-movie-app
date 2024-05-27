@@ -45,7 +45,7 @@
                     <div class="col-span-3 flex items-center">
                         <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
                             <p class="text-sm font-medium text-black dark:text-white">
-                            {{$genre['idem']}}
+                            {{$genre->id}}
                             </p>
                         </div>
                     </div>
