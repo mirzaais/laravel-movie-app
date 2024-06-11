@@ -14,21 +14,21 @@ class GenreSeeder extends Seeder
     public function run(): void
     {
         Genre::create([
-            'name' => 'laputa castel in the sky',
+            'name' => 'drama',
             'description' => '
             Pazu, seorang insinyur magang menemukan seorang gadis muda, Sheeta melayang turun dari langit mengenakan liontin bercahaya.'
         ]);
         Genre::create([
-            'name' => 'my neighbor totoro',
+            'name' => 'fiksi',
             'description' => 'Dua gadis muda, Satsuki dan Mei,
              telah pindah bersama ayah mereka ke rumah baru di negara itu, sementara ibu mereka pulih dari sakit di rumah sakit terdekat.'
         ]);
         Genre::create([
-            'name' => 'Kikis delivery service',
+            'name' => 'comedy',
             'description' => 'Sudah menjadi tradisi bagi semua penyihir muda untuk meninggalkan keluarga mereka pada malam bulan purnama untuk mempelajari keahlian mereka.'
         ]);
         Genre::create([
-            'name' => 'Only Yesterday',
+            'name' => 'action',
             'description' => '
             Taeko, seorang wanita lajang yang bekerja di meja kerja di Tokyo, telah mencapai titik dalam hidupnya di mana dia harus melepaskan diri dari pekerjaannya, 
             keluarganya dan yang terpenting, kehidupan kota besar.'

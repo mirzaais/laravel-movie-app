@@ -16,9 +16,15 @@ class GenreController extends Controller
 
     public function create()
     {
-       
+        $genres = Genre::all();
         return view('genres.create', );
     }
+
+    public function edit(Genre $genre)
+{
+    $genres = Genre::all();
+    return view('genres.edit', compact('genre', 'genres'));
+}
     
     public function store(Request $request)
     {
@@ -29,9 +35,22 @@ class GenreController extends Controller
     
         Genre::create($validatedData);
     
-        return redirect('/genre')->with('success', 'Genre added successfully!');
+        return redirect('/genres')->with('success', 'Genre added successfully!');
     }
+
+    public function update(Request $request, Genre $genre)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+        ]);
     
+        $genre->update($validatedData);
+    
+        return redirect('/genres')->with('success', 'Genre update successfully!');
+    }
+
+
     public function destroy(Genre $genre)
     {
         $genre->delete();
